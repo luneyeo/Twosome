@@ -770,7 +770,8 @@ a {
   justify-content: center;
   gap: 30px;
 }
-.franchise_button a {
+.franchise_button li a {
+  display: block;
   width: 200px;
   height: 54px;
   font-size: 17px;
@@ -867,11 +868,12 @@ a {
 /* a태그 */
 .notice_box {
   width: 40vw;
-  display: block;
+  padding: 24px;
   position: relative;
   border-bottom: 1px solid var(--color-border);
-  padding: 24px;
+  cursor: pointer;
 }
+
 
 /* 버튼 텍스트 */
 .button_title {
@@ -888,7 +890,7 @@ a {
 }
 
 /* 버튼 호버시 */
-.notice_box:after {
+.notice_box::after {
   content: "";
   width: 0%;
   height: 100%;
@@ -897,10 +899,10 @@ a {
   left: 0;
   background: var(--color-dark-grey)
 }
-.notice_box:hover:after {
+.notice_box:hover::after {
   width: 100%;
   z-index: -6;
-  transition: all .4s ease-in-out;
+  transition: all .5s ease-in-out;
 }
 .notice_box:hover .button_text {
   text-decoration: underline 1px;
